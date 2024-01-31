@@ -1,0 +1,1 @@
+REST API service for weather measurement. Sensor (client) measures temperature and presenсe of raining, and sends it to the server. Serveer recieves this information, saves it into database for for analysis and subsequent processing.
