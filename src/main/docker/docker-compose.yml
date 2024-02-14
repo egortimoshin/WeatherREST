@@ -22,6 +22,8 @@ services:
       POSTGRES_DB: measurement-db
     ports:
       - 5432:5432
+    volumes:
+      - postgres:/var/lib/postgresql/data/
 
   pgadmin:
     image: dpage/pgadmin4:latest
@@ -32,3 +34,10 @@ services:
         PGADMIN_DEFAULT_PASSWORD: root
     ports:
        - 5050:80
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+
+volumes:
+  postgres:
+  pgadmin:
+
