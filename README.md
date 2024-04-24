@@ -1,1 +1,17 @@
-REST API service for weather measurement. Sensor (client) measures temperature and presenсe of raining, and sends it to the server. Serveer recieves this information, saves it into database for for analysis and subsequent processing.
+# Создание REST-API сервера для измерения погоды
+
+Данный проект представляет собой REST API сервис для работы с метеорологическими данными, получаемыми от метеорологических датчиков. Сервис позволяет регистрировать новые датчики, добавлять измерения температуры и дождя, а также получать общую информацию о измерениях, включая количество дождливых дней.
+
+# Функционал:
+
+- регистрация нового датчика
+- изменение существующего датчика
+- добавление нового измерения температуры и дождя
+- получение всех измерений
+- получение количества дождливых дней
+
+## Также добавлена контейнеризация docker
+
+# Документация для API доступна по ссылке
+http://localhost:8080/swagger-ui/index.html
+<img width="1434" alt="image" src="https://github.com/egortimoshin/WeatherRestApiService/assets/122122063/9108c095-f514-4194-80ac-38fda3119ffc">
