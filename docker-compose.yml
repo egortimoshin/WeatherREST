@@ -3,7 +3,7 @@ version: '3.8'
 services:
   app:
     build:
-      context: ..
+      context: .
     container_name: app
     depends_on:
       - db
