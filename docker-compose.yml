@@ -14,7 +14,7 @@ services:
       - 8080:8080
 
   db:
-    image: postgres:latest
+    image: postgres:16-alpine
     container_name: db
     environment:
       POSTGRES_USER: etimoshin
@@ -26,7 +26,7 @@ services:
       - postgres:/var/lib/postgresql/data/
 
   pgadmin:
-    image: dpage/pgadmin4:latest
+    image: dpage/pgadmin4:8
     container_name: pgadmin
     restart: always
     environment:

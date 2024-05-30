@@ -83,17 +83,17 @@
 				</configuration>
 			</plugin>
 			<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-jar-plugin</artifactId>
-			<configuration>
-				<archive>
-					<manifest>
-						<mainClass>com.etim.Project3Application</mainClass>
-					</manifest>
-				</archive>
-			</configuration>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.etim.Project3Application</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
 			</plugin>
-	</plugins>
+		</plugins>
 	</build>
 
 </project>

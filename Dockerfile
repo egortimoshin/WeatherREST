@@ -1,9 +1,10 @@
-#FROM openjdk:21
-#ARG JAR_FILE=*.jar
-#COPY ${JAR_FILE} application.jar
-#ENTRYPOINT ["java", "-jar", "application.jar"]
+FROM arm64v8/maven:sapmachine as builder
+WORKDIR /app
+COPY . /app/.
+RUN mvn -f /app/pom.xml clean package -Dmaven.test.skip=true
 
 FROM openjdk:21
 WORKDIR /app
-COPY target/*.jar application.jar
-ENTRYPOINT ["java", "-jar", "application.jar"]
+COPY --from=builder /app/target/*.jar /app/*.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "/app/*.jar"]
